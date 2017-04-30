@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>habitarium</artifactId>
+        <groupId>niels.jani.habitarium</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>habitarium-war</artifactId>
+    <packaging>war</packaging>
+
+
+    <dependencies>
+        <!-- habitarium -->
+        <dependency>
+            <groupId>niels.jani.habitarium</groupId>
+            <artifactId>habitarium-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>niels.jani.habitarium</groupId>
+            <artifactId>habitarium-test-config</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>niels.jani.habitarium</groupId>
+            <artifactId>habitarium-infrastructure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>niels.jani.habitarium</groupId>
+            <artifactId>habitarium-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>niels.jani.habitarium</groupId>
+            <artifactId>habitarium-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>niels.jani.habitarium</groupId>
+            <artifactId>habitarium-rest</artifactId>
+        </dependency>
+
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <configuration>
+                    <dotGitDirectory>${basedir}/../../.git</dotGitDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
