@@ -16,7 +16,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: niels.jani.habitarium:habitarium-config:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="habitarium-config" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -91,5 +91,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.easytesting:fest-reflect:1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.easytesting:fest-util:1.1.6" level="project" />
+    <orderEntry type="library" name="Maven: postgresql:postgresql:9.2-1002.jdbc4" level="project" />
   </component>
 </module>

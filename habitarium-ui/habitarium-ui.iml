@@ -30,5 +30,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.assertj:assertj-core:3.4.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.easytesting:fest-reflect:1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.easytesting:fest-util:1.1.6" level="project" />
+    <orderEntry type="library" name="Maven: postgresql:postgresql:9.2-1002.jdbc4" level="project" />
   </component>
 </module>

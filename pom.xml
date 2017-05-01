@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>habitarium</groupId>
+    <groupId>niels.jani.habitarium</groupId>
     <artifactId>habitarium</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -28,7 +28,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <!--<ojdbc.version>11.1.0.7.0</ojdbc.version>-->
+        <postgres.version>9.2-1002.jdbc4</postgres.version>
         <assertj.version>3.4.0</assertj.version>
         <festreflect.version>1.4</festreflect.version>
         <selenide.version>3.6</selenide.version>
@@ -84,6 +84,10 @@
             <!--<artifactId>ojdbc6</artifactId>-->
             <!--<scope>provided</scope>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
 
     </dependencies>
 
@@ -91,63 +95,63 @@
         <dependencies>
             <!--Habitarium modules-->
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-infrastructure</artifactId>
                 <version>${project.version}</version>
                 <scope>test</scope>
                 <type>test-jar</type>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-config</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-test-config</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-domain</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-service</artifactId>
                 <version>${project.version}</version>
                 <type>test-jar</type>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-rest</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-ui</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>habitarium</groupId>
+                <groupId>niels.jani.habitarium</groupId>
                 <artifactId>habitarium-war</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -187,6 +191,19 @@
                 <groupId>commons-validator</groupId>
                 <artifactId>commons-validator</artifactId>
                 <version>1.4.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>9.2-1002.jdbc4</version>
+            </dependency>
+
+            <!--plugins-->
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.5</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -293,6 +310,13 @@
             </build>
         </profile>
     </profiles>
+
+    <repositories>
+        <repository>
+            <id>alfresco</id>
+            <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+        </repository>
+    </repositories>
 
 
 </project>
