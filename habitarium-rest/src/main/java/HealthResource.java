@@ -7,8 +7,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RestController
 public class HealthResource {
 
-    @RequestMapping(method = GET, produces = APPLICATION_JSON_VALUE, path = "/health")
-    public String health() {
+    @RequestMapping(method = GET, produces = APPLICATION_JSON_VALUE, path = "/healthy")
+    public String healthy() {
         return "health-o!";
     }
 }
