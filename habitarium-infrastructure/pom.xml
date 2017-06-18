@@ -50,10 +50,10 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.flywaydb</groupId>-->
+                <!--<artifactId>flyway-maven-plugin</artifactId>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>properties-maven-plugin</artifactId>
@@ -81,28 +81,28 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.flywaydb</groupId>
-                    <artifactId>flyway-maven-plugin</artifactId>
-                    <version>${flyway.version}</version>
-                    <configuration>
-                        <user>${flyway.user}</user>
-                        <password>${flyway.password}</password>
-                        <url>${flyway.url}</url>
-                        <driver>${flyway.driver}</driver>
-                        <schemas>${flyway.schemas}</schemas>
-                        <skip>${skipSql}</skip>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <phase>pre-integration-test</phase>
-                            <goals>
-                                <goal>clean</goal>
-                                <goal>migrate</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+                <!--<plugin>-->
+                    <!--<groupId>org.flywaydb</groupId>-->
+                    <!--<artifactId>flyway-maven-plugin</artifactId>-->
+                    <!--<version>${flyway.version}</version>-->
+                    <!--<configuration>-->
+                        <!--<user>${flyway.user}</user>-->
+                        <!--<password>${flyway.password}</password>-->
+                        <!--<url>${flyway.url}</url>-->
+                        <!--<driver>${flyway.driver}</driver>-->
+                        <!--<schemas>${flyway.schemas}</schemas>-->
+                        <!--<skip>${skipSql}</skip>-->
+                    <!--</configuration>-->
+                    <!--<executions>-->
+                        <!--<execution>-->
+                            <!--<phase>pre-integration-test</phase>-->
+                            <!--<goals>-->
+                                <!--<goal>clean</goal>-->
+                                <!--<goal>migrate</goal>-->
+                            <!--</goals>-->
+                        <!--</execution>-->
+                    <!--</executions>-->
+                <!--</plugin>-->
             </plugins>
         </pluginManagement>
     </build>
